@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				
+			>
+				
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Diretor de Arte e Desenvolvedor na WP/N - SP /Remoto (2023 - presente)
+
+Responsável pela criação de campanhas publicitárias para marcas como Ben&Jerry's, Zorba,
+Kibon e Cofap. Materiais gráficos para campanhas publicitárias, incluindo banners, landing 
+pages e anúncios em mídias sociais 
+<br>
+<br>
+
+Designer Gráfico Beatnik e TORÓ CAPAS DE CHUVA - CWB /Remoto (2022 - 2023)
+Criação de campanhas para o site e Mídias Sociais, Auxiliar em testes de novas 
+peças de vestuário e criador de tags de produto para ambas das marcas.
+<br>
+<br>
+Pelissari Gestão e Tecnologia / CastGroup - (2019 - 2020)
+Auxiliar adminstrativo para S.A.P e criações de chamados, onde aprendi sobre MySQL
+e area de tecnologia. Tive a oportunidade de trabalhar com  Vpns e direcionamento de
+informações para as determinadas equipes. 
+Comunicação e trabalho em equipe.
+<br>
+<br>
+</p>
+			
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>Análise e Desenvolvimento de Sistemas, Universidade Positivo (2022 - presente)
+					<br>
+
+Atualmente cursando o 3º semestre
+Conhecimento em HTML e CSS avançado, noções de JS e Java e MySQL básico
+<br>
+<br>
+Design Gráfico, Universidade Positivo (2020-2020)
+
+Conhecimento em ferramentas de design, como Adobe Photoshop, Illustrator,
+Sketch e Figma
+<br>
+<br>
+
+Ensino Médio Técnico - Sesc São José  Bom Jesus (2015 - 2018)
+Ensino médio Completo
+Curso administrativo (2017)
+Curso de Computação projeto de extensão feito no contraturno (2016)
+
+Certificações:
+
+Certificado em Desenvolvimento Web Udemy (2023)
+Certificado em Photoshop CC, Adobe (2018)</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>Ferramentas de design: Adobe Photoshop avançado, Adobe Illustrator avançado,
+Sketch basico, Figma Intermediário
+<br>
+<br>
+Linguagens de programação: HTML, CSS, JavaScript, Java
+Banco de dados: MySQL
+Softwares de desenvolvimento: Visual Studio Code
+Conhecimentos em desenvolvimento web: React basico 
+<br>
+<br>
+Experiência em criação de campanhas publicitárias e materiais gráficos
+<br>
+<br>
+Inglês Intermediário</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
